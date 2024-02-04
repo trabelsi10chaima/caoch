@@ -1,12 +1,498 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="styles.css" rel="stylesheet">
-    <title>Document</title>
+    <link href="./dist/output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet">
+    <title>Coach Maroua Essaidi</title>
+    <script type="module" crossorigin="" src="./assets/index.js"></script>
 </head>
+
 <body>
-    
+    <section>
+        <div class="container max-w-screen-xl mx-auto px-4">
+            <nav class="flex-wrap lg:flex items-center justify-between mb-24 xl:mb-48 py-4" x-data="{navbarOpen:false}">
+                <span
+                    class="px-8 py-3 font-medium text-indigo-800 text-lg text-center border-2 border-indigo-800 rounded-md hover:bg-indigo-800 hover:text-white transiton ease-linear duration-300">
+                    <a href="#contact">Embauchez-moi</a>
+                </span>
+                <div class="flex items-center mb-10 lg:mb-0">
+                    <button
+                        class="w-10 h-10 lg:hidden ml-auto flex items-center justify-center text-indigo-800 border border-indigo-800 rounded-md"
+                        @click="navbarOpen = !navbarOpen">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="menu-toggle">
+                            <path d="M6 18L18 6M18 18L6 6" stroke="#000000" stroke-width="2" />
+                        </svg>
+                    </button>
+                </div>
+
+                <ul class="lg:flex flex-col lg:flex-row lg:items-center lg:space-x-20 mb-10 xl:mb-0"
+                    :class="{'hidden':!navbarOpen,'flex':navbarOpen}">
+                    <li
+                        class="font-medium text-gray-500 text-lg hover:text-indigo-800 transiton ease-in-out duration-300 mb-5 lg:mb-0">
+                        <a href="#services">Services</a>
+                    </li>
+                    <li
+                        class="font-medium text-gray-500 text-lg hover:text-indigo-800 transiton ease-in-out duration-300 mb-5 lg:mb-0">
+                        <a href="#experiences">Experiences</a>
+                    </li>
+                    <li
+                        class="font-medium text-gray-500 text-lg hover:text-indigo-800 transiton ease-in-out duration-300 mb-5 lg:mb-0">
+                        <a href="#">Blog</a>
+                    </li>
+                    <li
+                        class="font-medium text-gray-500 text-lg hover:text-indigo-800 transiton ease-in-out duration-300 mb-5 lg:mb-0">
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <header class="flex flex-col lg:flex-row justify-center lg:mb-20">
+                <div class="text-center lg:text-left mb-20 lg:mb-0">
+                    <div class="flex items-center justify-center lg:justify-start gap-2 mb-10">
+                        <span class="w-20 h-0.5 bg-indigo-700"></span>
+
+                        <p class="font-medium text-indigo-700 text-xl">
+                            Maroua Essaidi
+                        </p>
+                    </div>
+
+                    <h1 class="font-bold text-gray-800 text-4xl md:text-5xl mb-10">
+                        Coach et formatrice en Soft Skills <br>
+                        Coach et accompangniatrice prentale
+                    </h1>
+
+                    <p class="font-normal text-gray-500 text-sm md:text-md xl:text-lg mb-10">
+                        Salut, je suis Maroua. je suis passionnée par l'aide aux individus et aux familles pour qu'ils
+                        puissent exploiter pleinement leur potentiel.
+                        En tant que coach certifiée en Soft Skills et spécialiste de l'accompagnement parental, je suis
+                        convaincue qu'avec les bons outils et le soutien nécessaire, nous pouvons tous surmonter les
+                        défis de la vie et construire des relations épanouissantes.
+                    </p>
+
+                    <div class="space-y-5 lg:space-x-5 mb-10">
+                        <a href="#contact"
+                            class="block md:inline px-8 py-3 font-medium bg-indigo-800 text-white text-lg rounded-md hover:bg-indigo-600 transiton ease-in-out duration-300">Embauchez-moi
+                        </a>
+
+                        <a href="#"
+                            class="block md:inline px-8 py-3 font-medium text-indigo-800 text-lg border-2 border-indigo-800 rounded-md hover:bg-indigo-600 hover:text-white transiton ease-linear duration-300">En
+                            savoir plus</a>
+                    </div>
+
+                    <hr class="text-gray-500 mb-5">
+
+                    <span class="font-normal text-gray-500 text-md">Êtes-vous prêt(e) à libérer votre plein potentiel et
+                        à construire des relations plus solides ? Contactez-moi dès aujourd'hui pour planifier une
+                        consultation et découvrir comment je peux vous aider à atteindre vos objectifs.</span>
+                </div>
+
+                <div class="mx-auto lg:mx-0">
+                    <img src="./image/prof-img.jpg" alt="Image" class="h-[86%] ml-16">
+                </div>
+            </header>
+        </div>
+        <!-- container.// -->
+    </section>
+
+    <section class="py-16 lg:mb-20" id="services">
+        <div class="container max-w-screen-xl mx-auto px-4">
+            <h1
+                class="font-semibold text-gray-800 text-2xl md:text-3xl xl:text-5xl text-center leading-tight mb-20 xl:mb-40">
+                Pour des jeunes épanouis et des parents confiants : <br>
+                De la maîtrise des Soft skills à la pratique d'une parentalité sereine,
+                <span class="text-indigo-800"> nous offrons les clés de
+                    <br>
+                    la réussite.</span>
+            </h1>
+
+            <div class="grid grid-cols-3">
+                <div class="grid-cols-1 mx-auto xl:mx-0">
+                    <img src="./image/home-img-2.jpg" alt="Image" class="w-[75%]">
+                </div>
+
+                <div class="grid-cols-2 text-center xl:text-left">
+                    <div class="mb-16 xl:mb-10 w-80">
+                        <h4 class="font-semibold text-gray-800 text-md md:text-lg mb-5">
+                            Formation Soft skills
+                        </h4>
+
+                        <p class="font-normal text-gray-500 text-xs md:text-sm mb-5">
+                            sont des compétences humaines essentielles pour réussir dans la vie
+                            professionnelle et personnelle. Elles incluent la communication,
+                            la collaboration, la résolution de problèmes, la gestion du stress,
+                            et bien d'autres.
+                        </p>
+
+                        <a href="#"
+                            class="flex items-center justify-center xl:justify-start gap-3 font-medium text-indigo-800 text-md hover:text-indigo-600 transition ease-in-out duration-300">
+                            Savoir Plus
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="mb-16 xl:mb-10 w-80">
+                        <h4 class="font-semibold text-gray-800 text-md md:text-lg mb-5">
+                            L'accompagnement Parentale
+                        </h4>
+
+                        <p class="font-normal text-gray-500 text-xs md:text-sm mb-5">
+                            L'accompagnement parental est un service qui vise à soutenir les parents
+                            dans leur rôle éducatif. C'est est un outil précieux qui peut aider les familles
+                            à surmonter les difficultés et à construire des relations plus harmonieuses
+                        </p>
+
+                        <a href="#"
+                            class="flex items-center justify-center xl:justify-start gap-3 font-medium text-indigo-800 text-md hover:text-indigo-600 transition ease-in-out duration-300">
+                            Savoir Plus
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="grid-cols-3">
+                    <div class="mb-16 xl:mb-10 w-96">
+                        <h4 class="font-semibold text-gray-800 text-md md:text-lg mb-5">
+                            Coaching Individuel
+                        </h4>
+
+                        <p class="font-normal text-gray-500 text-xs md:text-sm mb-5">
+                            Le coaching individuel est un processus de développement personnel qui vise
+                            à vous aider à atteindre vos objectifs et à réaliser votre plein potentiel.
+                            Il s'agit d'un accompagnement personnalisé et confidentiel par un coach professionnel
+                            certifié.
+                        </p>
+
+                        <a href="#"
+                            class="flex items-center justify-center xl:justify-start gap-3 font-medium text-indigo-800 text-md hover:text-indigo-600 transition ease-in-out duration-300">
+                            See Works
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="">
+                        <h4 class="font-semibold text-gray-800 text-md md:text-lg mb-5">
+                            3D Modeling
+                        </h4>
+
+                        <p class="font-normal text-gray-500 text-xs md:text-sm mb-5">
+                            Help you translate your existing design or
+                            concept <br>
+                            into CAD or to work with you to develop the
+                            ideal <br>
+                            design. 3D Models great for modern digital art
+                        </p>
+
+                        <a href="#"
+                            class="flex items-center justify-center xl:justify-start gap-3 font-medium text-indigo-800 text-md hover:text-indigo-600 transition ease-in-out duration-300">
+                            See Works
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <!-- container.// -->
+    </section>
+
+    <section class="py-16">
+        <div class="container max-w-screen-xl mx-auto px-4">
+            <h1
+                class="font-semibold text-gray-800 text-center text-xl md:text-2xl xl:text-3xl leading-tight mb-10 md:mb-20 xl:mb-40">
+                Nous mettons un point d'honneur à offrir à nos clients des services de coaching de qualité, <br>
+                leur permettant de développer leurs compétences et d'être accompagnés tout au long de leur parcours.
+            </h1>
+
+            <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8">
+                <!-- image - start -->
+                <div
+                    class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-96">
+                    <img src="./image/image1.jpg" alt="Image" loading="lazy"
+                        class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
+
+                    <div
+                        class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
+                    </div>
+
+                </div>
+                <!-- image - end -->
+
+                <!-- image - start -->
+                <div
+                    class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-96">
+                    <img src="./image/image2.jpg" alt="Image" loading="lazy"
+                        class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
+
+                    <div
+                        class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
+                    </div>
+
+                </div>
+                <!-- image - end -->
+
+                <!-- image - start -->
+                <div
+                    class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-96">
+                    <img src="./image/image4.jpg" alt="Image" loading="lazy"
+                        class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
+
+                    <div
+                        class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
+                    </div>
+
+                </div>
+                <!-- image - end -->
+
+                <!-- image - start -->
+                <div
+                    class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-96">
+                    <img src="./image/image3.jpg" alt="Image" loading="lazy"
+                        class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
+
+                    <div
+                        class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
+                    </div>
+
+                </div>
+                <!-- image - end -->
+            </div>
+        </div>
+        <!-- container.// -->
+    </section>
+
+    <section class="py-8 md:py-16">
+        <div class="container max-w-screen-xl mx-auto px-4">
+            <div class="xl:space-x-1 flex flex-col md:flex-row items-center justify-center">
+                <div class="text-center mb-10 xl:mb-0">
+                    <div class="flex items-center justify-center">
+                        <div class="w-20 mb-2 flex justify-center">
+                            <img src="./image/acjemp.png" alt="bar-chart-2 Icon">
+                        </div>
+                    </div>
+
+                    <h2 class="font-semibold text-gray-700 text-xl md:text-3xl mb-5">
+                        Formation Soft Skills
+                    </h2>
+
+                    <p class="font-normal text-gray-400 text-sm md:text-lg">
+                        Formation Soft Skills s'inscrit dans le cadre <br>
+                        du programme Acjemp lancer par l'Organisation Internationale du travail (OIT) en coopération
+                        avec l'Agence
+                        nationale pour l'emploi et le travail <br>
+                        indépendant (Aneti). L'objectif de ce projet est d’améliorer l’accès des jeunes chercheurs<br>
+                        d'emploi.
+
+                    </p>
+                </div>
+
+                <div class="text-center mb-10 md:mb-0">
+                    <div class="flex items-center justify-center">
+                        <div class="w-24 flex justify-center">
+                            <img src="./image/parelle.png" alt="dollar-sign Icon">
+                        </div>
+                    </div>
+
+                    <h2 class="font-semibold text-gray-700 text-xl md:text-3xl mb-5">
+                        Programme Par'elles
+                    </h2>
+
+                    <p class="font-normal text-gray-400 text-sm md:text-lg">
+                        Le programme PAR'ELLE est soutenu par le <br>
+                        projet FAST, financé par l'Agence Française de Developpement (ADF)
+                        et mis en œuvre par la Caisse des Dépôts et Consignations Tunisienne (CDC)<br>
+                        Ce projet vise à transformer les femmes de porteuses d'idées à des cheffes d'entreprise.
+                    </p>
+                </div>
+
+                <div class="text-center">
+                    <div class="flex items-center justify-center">
+                        <div class="w-24 flex justify-center">
+                            <img src="./image/taki.png" alt="search Icon">
+                        </div>
+                    </div>
+
+                    <h2 class="font-semibold text-gray-700 text-xl md:text-3xl mb-5">
+                        Taki Talk Radio
+                    </h2>
+
+                    <p class="font-normal text-gray-400 text-sm md:text-lg">
+                        L'épisode 15 de Taki Talk Radio se penche sur les problèmes de distraction
+                        avec ou sans hyperactivité. les causes et les manifestations <br>
+                        de ces troubles. et des conseils pratiques pour aider les enfants
+                        qui en souffrent à améliorer leur <br> concentration et leur attention.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- container.// -->
+    </section>
+
+    <section class="py-16 lg:mb-20" id="experiences">
+        <div class="container max-w-screen-xl mx-auto px-4">
+            <h1 class="font-semibold text-gray-800 text-5xl text-center mb-20 xl:mb-40">
+                Carrières
+            </h1>
+
+            <div class="flex flex-row text-center justify-center space-x-16 md:space-x-24">
+                <div class="space-y-8 md:space-y-16 mb-16 md:mb-0">
+                    <h6 class="font-medium text-gray-500 text-base uppercase">
+                        Entreprise
+                    </h6>
+
+                    <p class="font-semibold text-gray-600 text-base">
+                        L2M Junior Leaders
+                        <span class="font-normal text-gray-400">/ Nabeul</span>
+                    </p>
+
+                    <p class="font-semibold text-gray-600 text-base">
+                        International Network of Professional Trainers
+                        <span class="font-normal text-gray-400">/ Tunis</span>
+                    </p>
+
+                    <p class="font-semibold text-gray-600 text-base">
+                        Bureau International du travail
+                        <span class="font-normal text-gray-400">/ ****</span>
+                    </p>
+
+                    <p class="font-semibold text-gray-600 text-base">
+                        Profiling NOVA
+                        <span class="font-normal text-gray-400">/ ****</span>
+                    </p>
+
+                    <p class="font-semibold text-gray-600 text-base">
+                        Coach Maroua Essaidi
+                        <span class="font-normal text-gray-400">/ Nabeul</span>
+                    </p>
+
+                    <p class="font-semibold text-gray-600 text-base">
+                        Institut de Formation des Cadres de l'Enfance en Tunisie
+                        <span class="font-normal text-gray-400">/ ****</span>
+                    </p>
+
+                </div>
+
+                <div class="space-y-8 md:space-y-16 mb-16 md:mb-0">
+                    <h6 class="font-medium text-gray-500 text-base uppercase">
+                        Position
+                    </h6>
+
+                    <p class="font-normal text-gray-500 text-base">
+                        Co-fondatrice et consultante
+                    </p>
+
+                    <p class="font-normal text-gray-500 text-base">
+                        Formatrice
+                    </p>
+
+                    <p class="font-normal text-gray-500 text-base">
+                        Coach Formatrice en Softskills
+                    </p>
+
+                    <p class="font-normal text-gray-500 text-base">
+                        Consultante
+                    </p>
+
+                    <p class="font-normal text-gray-500 text-base">
+                        Gérante
+                    </p>
+
+                    <p class="font-normal text-gray-500 text-base">
+                        Proffesseur
+                    </p>
+
+                </div>
+
+                <div class="space-y-8 md:space-y-16 mb-16 md:mb-0">
+                    <h6 class="font-medium text-gray-500 text-base uppercase">
+                        Année
+                    </h6>
+
+                    <p class="font-normal text-gray-500 text-base">2022</p>
+
+                    <p class="font-normal text-gray-500 text-base">2022</p>
+
+                    <p class="font-normal text-gray-500 text-base">2018</p>
+
+                    <p class="font-normal text-gray-500 text-base">20**</p>
+
+                    <p class="font-normal text-gray-500 text-base">2018</p>
+
+                    <p class="font-normal text-gray-500 text-base">2014</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-red-50 py-16" id="contact">
+        <div class="container max-w-screen-xl mx-auto px-4">
+            <div class="text-center">
+                <h1 class="font-medium text-gray-700 text-2xl md:text-5xl mb-5">
+                    Contacter moi avec
+                </h1>
+
+                <p class="font-normal text-gray-400 text-sm md:text-lg mb-20 mt-10">
+                    Développez votre potentiel et celui de votre famille.
+                    Coaching personnalisé en Soft skills et stratégies parentales. <br>
+                    Réservez votre consultation gratuite dès aujourd'hui.
+                </p>
+
+                <div class="flex items-center justify-center space-x-4 md:space-x-8">
+                    <a href="mailto:trabelsi10chaima@gmail.com"
+                        class="w-16 h-16 flex items-center justify-center rounded-full hover:bg-red-200 transition ease-in-out duration-300">
+                        <svg stroke="currentColor" stroke-width="1.5" fill="none" class="text-indigo-800 transition ease-in-out duration-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="5" width="20" height="14" rx="2" ry="2"></rect>
+                            <polyline points="2 7 12 13 22 7"></polyline>
+                        </svg>               
+                    </a>
+
+                    <a href="https://www.facebook.com/faydh.ennour"
+                        class="w-16 h-16 flex items-center justify-center rounded-full hover:bg-red-200 transition ease-in-out duration-300">
+                        <svg stroke-width="1" class="text-indigo-800 transition ease-in-out duration-500"
+                            stroke="currentColor" width="24" height="24" xmlns="http://www.w3.org/2000/svg" x="0px"
+                            y="0px" viewBox="0 0 50 50">
+                            <path
+                                d="M 25 3 C 12.861562 3 3 12.861562 3 25 C 3 36.019135 11.127533 45.138355 21.712891 46.728516 L 22.861328 46.902344 L 22.861328 29.566406 L 17.664062 29.566406 L 17.664062 26.046875 L 22.861328 26.046875 L 22.861328 21.373047 C 22.861328 18.494965 23.551973 16.599417 24.695312 15.410156 C 25.838652 14.220896 27.528004 13.621094 29.878906 13.621094 C 31.758714 13.621094 32.490022 13.734993 33.185547 13.820312 L 33.185547 16.701172 L 30.738281 16.701172 C 29.349697 16.701172 28.210449 17.475903 27.619141 18.507812 C 27.027832 19.539724 26.84375 20.771816 26.84375 22.027344 L 26.84375 26.044922 L 32.966797 26.044922 L 32.421875 29.564453 L 26.84375 29.564453 L 26.84375 46.929688 L 27.978516 46.775391 C 38.71434 45.319366 47 36.126845 47 25 C 47 12.861562 37.138438 3 25 3 z M 25 5 C 36.057562 5 45 13.942438 45 25 C 45 34.729791 38.035799 42.731796 28.84375 44.533203 L 28.84375 31.564453 L 34.136719 31.564453 L 35.298828 24.044922 L 28.84375 24.044922 L 28.84375 22.027344 C 28.84375 20.989871 29.033574 20.060293 29.353516 19.501953 C 29.673457 18.943614 29.981865 18.701172 30.738281 18.701172 L 35.185547 18.701172 L 35.185547 12.009766 L 34.318359 11.892578 C 33.718567 11.811418 32.349197 11.621094 29.878906 11.621094 C 27.175808 11.621094 24.855567 12.357448 23.253906 14.023438 C 21.652246 15.689426 20.861328 18.170128 20.861328 21.373047 L 20.861328 24.046875 L 15.664062 24.046875 L 15.664062 31.566406 L 20.861328 31.566406 L 20.861328 44.470703 C 11.816995 42.554813 5 34.624447 5 25 C 5 13.942438 13.942438 5 25 5 z">
+                            </path>
+                        </svg>
+                    </a>
+
+                    <a href="https://www.instagram.com/maroua.essaidi/"
+                        class="w-16 h-16 flex items-center justify-center rounded-full hover:bg-red-200 transition ease-in-out duration-300">
+                        <svg stroke-width="1" class="text-indigo-800 transition ease-in-out duration-500"
+                            stroke="currentColor" width="24" height="24" xmlns="http://www.w3.org/2000/svg" x="0px"
+                            y="0px" viewBox="0 0 48 48">
+                            <path
+                                d="M 15 4 C 8.9365932 4 4 8.9365932 4 15 L 4 33 C 4 39.063407 8.9365932 44 15 44 L 33 44 C 39.063407 44 44 39.063407 44 33 L 44 15 C 44 8.9365932 39.063407 4 33 4 L 15 4 z M 15 6 L 33 6 C 37.982593 6 42 10.017407 42 15 L 42 33 C 42 37.982593 37.982593 42 33 42 L 15 42 C 10.017407 42 6 37.982593 6 33 L 6 15 C 6 10.017407 10.017407 6 15 6 z M 35 11 C 33.895 11 33 11.895 33 13 C 33 14.105 33.895 15 35 15 C 36.105 15 37 14.105 37 13 C 37 11.895 36.105 11 35 11 z M 24 14 C 18.488666 14 14 18.488666 14 24 C 14 29.511334 18.488666 34 24 34 C 29.511334 34 34 29.511334 34 24 C 34 18.488666 29.511334 14 24 14 z M 24 16 C 28.430666 16 32 19.569334 32 24 C 32 28.430666 28.430666 32 24 32 C 19.569334 32 16 28.430666 16 24 C 16 19.569334 19.569334 16 24 16 z">
+                            </path>
+                        </svg>
+
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>
