@@ -10,18 +10,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&amp;display=swap"
         rel="stylesheet">
     <title>Coach Maroua Essaidi</title>
-    <script type="module" crossorigin="" src="./assets/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
 </head>
 
 <body>
     <section>
         <div class="container max-w-screen-xl mx-auto px-4">
             <nav class="flex-wrap lg:flex items-center justify-between mb-24 xl:mb-48 py-4" x-data="{navbarOpen:false}">
-                <span
-                    class="px-8 py-3 font-medium text-indigo-800 text-lg text-center border-2 border-indigo-800 rounded-md hover:bg-indigo-800 hover:text-white transiton ease-linear duration-300">
-                    <a href="#contact">Embauchez-moi</a>
-                </span>
-                <div class="flex items-center mb-10 lg:mb-0">
+                <div class="flex items-center mb-10 lg:mb-0 justify-between">
+                    <span
+                        class="px-8 py-3 font-medium text-indigo-800 text-lg text-center border-2 border-indigo-800 rounded-md hover:bg-indigo-800 hover:text-white transiton ease-linear duration-300">
+                        <a href="#contact">Embauchez-moi</a>
+                    </span>
                     <button
                         class="w-10 h-10 lg:hidden ml-auto flex items-center justify-center text-indigo-800 border border-indigo-800 rounded-md"
                         @click="navbarOpen = !navbarOpen">
@@ -93,7 +93,7 @@
                 </div>
 
                 <div class="mx-auto lg:mx-0">
-                    <img src="./image/prof-img.jpg" alt="Image" class="h-[86%] ml-16">
+                    <img src="./image/prof-img.jpg" alt="Image" class="h-[86%] md:ml-16">
                 </div>
             </header>
         </div>
@@ -111,12 +111,12 @@
                     la réussite.</span>
             </h1>
 
-            <div class="grid grid-cols-3">
-                <div class="grid-cols-1 mx-auto xl:mx-0">
+            <div class="flex flex-col md:flex-row justify-center items-center">
+                <div class="mb-6">
                     <img src="./image/home-img-2.jpg" alt="Image" class="w-[75%]">
                 </div>
 
-                <div class="grid-cols-2 text-center xl:text-left">
+                <div class="text-center xl:text-left">
                     <div class="mb-16 xl:mb-10 w-80">
                         <h4 class="font-semibold text-gray-800 text-md md:text-lg mb-5">
                             Formation Soft skills
@@ -161,10 +161,8 @@
                             </svg>
                         </a>
                     </div>
-                </div>
-
-                <div class="grid-cols-3">
-                    <div class="mb-16 xl:mb-10 w-96">
+               
+                    <div class="mb-16 xl:mb-10 w-80">
                         <h4 class="font-semibold text-gray-800 text-md md:text-lg mb-5">
                             Coaching Individuel
                         </h4>
@@ -178,31 +176,7 @@
 
                         <a href="#"
                             class="flex items-center justify-center xl:justify-start gap-3 font-medium text-indigo-800 text-md hover:text-indigo-600 transition ease-in-out duration-300">
-                            See Works
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path d="M5 12h14M12 5l7 7-7 7" />
-                            </svg>
-                        </a>
-                    </div>
-
-                    <div class="">
-                        <h4 class="font-semibold text-gray-800 text-md md:text-lg mb-5">
-                            3D Modeling
-                        </h4>
-
-                        <p class="font-normal text-gray-500 text-xs md:text-sm mb-5">
-                            Help you translate your existing design or
-                            concept <br>
-                            into CAD or to work with you to develop the
-                            ideal <br>
-                            design. 3D Models great for modern digital art
-                        </p>
-
-                        <a href="#"
-                            class="flex items-center justify-center xl:justify-start gap-3 font-medium text-indigo-800 text-md hover:text-indigo-600 transition ease-in-out duration-300">
-                            See Works
+                            Savoir Plus
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round">
@@ -217,7 +191,7 @@
         <!-- container.// -->
     </section>
 
-    <section class="py-16">
+    <section class="py-10">
         <div class="container max-w-screen-xl mx-auto px-4">
             <h1
                 class="font-semibold text-gray-800 text-center text-xl md:text-2xl xl:text-3xl leading-tight mb-10 md:mb-20 xl:mb-40">
@@ -355,7 +329,7 @@
                 Carrières
             </h1>
 
-            <div class="flex flex-row text-center justify-center space-x-16 md:space-x-24">
+            <div class="flex flex-row text-center justify-center space-x-4 md:space-x-24">
                 <div class="space-y-8 md:space-y-16 mb-16 md:mb-0">
                     <h6 class="font-medium text-gray-500 text-base uppercase">
                         Entreprise
@@ -461,7 +435,7 @@
                 <div class="flex items-center justify-center space-x-4 md:space-x-8">
                     <a href="mailto:trabelsi10chaima@gmail.com"
                         class="w-16 h-16 flex items-center justify-center rounded-full hover:bg-red-200 transition ease-in-out duration-300">
-                        <svg stroke="currentColor" stroke-width="1.5" fill="none" class="text-indigo-800 transition ease-in-out duration-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <svg  stroke-width="1.5" fill="none" class="text-indigo-800 transition ease-in-out duration-500" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <rect x="2" y="5" width="20" height="14" rx="2" ry="2"></rect>
                             <polyline points="2 7 12 13 22 7"></polyline>
                         </svg>               
